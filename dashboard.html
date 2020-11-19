@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Wireframe</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Nav Component -->
+    <header>
+        <nav>
+            <ul class="menu">
+                <li>Home</li> <!-- Schedulease 'Schedule-ease'-->
+                <li>Profile</li>
+                <li>Create New Schedule</li>
+                <li>Schedules</li>
+                <li>Settings/Log Out</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- There will be many of these that will each be a component -->
+    <main>
+        <!-- Home (aka landing page) -->
+        <div class='landing'>
+            <h1>Welcome!</h1>
+            <p>This app is intended as a tool for scheduling groups of people according to their availablity and other requirements (or 'roles') that can be defined by you! You can select the available timeslots as well as any role you may need (for example 'interviewer' vs. 'candidate' or 'moderator' vs. 'participant'). To get started, click the button below! </p>
+            <button>Try it!</button>
+        </div>
+
+        <!-- Schedules List -->
+        <div class='schedules'>
+            <button>Create New</button>
+            
+            <ul class='schedules-list'>
+                <li>Sample Schedule</li>
+            </ul>
+
+        </div>
+
+        <!-- View Schedule Details: Navigation left side -->
+        <div>
+            <ul class='actions'>
+                <li>Schedule settings</li>
+                <li>Responses</li>
+                <li>Completed Schedule</li>
+            </ul>
+        </div>
+
+        <!-- Create New Schedule/Edit Schedule -->
+        <div>
+            <form>
+                <label for='sched-name'>Schedule name:</label>
+                <input name='sched-name'/>
+                <br>
+                <label for='roles-input'>Roles:</label>
+                <input type='text' name='roles-input'/>
+                <button>Add Role</button>
+                <ul>
+                    <li>Manager</li>
+                    <li>Employee</li>
+                </ul>
+                <br>
+                <label for='meeting-duration'>Meeting duration:</label>
+                <select>
+                    <option>15 minutes</option>
+                    <option>30 minutes</option>
+                    <option>1 hour</option>
+                </select>
+                <br>
+                <label for='Avail'>Select Available Timeframes</label>
+                <br>
+                <div name='Avail'>
+                    <input type="checkbox" id="time1" name="time1" value="9am">
+                    <label for="time1">9:00am</label><br>
+                    <input type="checkbox" id="time2" name="time2" value="10am">
+                    <label for="time2">10:00am</label><br>
+                </div>
+                <button type='submit'>Create Schedule</button>
+            </form>
+        </div>
+
+        <!-- Responses -->
+        <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Hours Available</th>
+                </tr>
+                <tr>
+                    <td>Sherlock Holmes</td>
+                    <td>shomles@gmail.com</td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Completed Schedule -->
+        <div>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>9am</td>
+                    <td>Sherlock Holmes</td>
+                    <td>shomles@gmail.com</td>
+                    <td>Manager</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Avail Form (link) -->
+        <div>
+            <form>
+                <label for='participant-name'>Your name:</label>
+                <input name='participant-name'/>
+                <br>
+                <label for='participant-email'>Your Email:</label>
+                <input name='participant-email'/>
+                <br>
+                <label for='role-select'>Role:</label>
+                <select>
+                    <option>Manager</option>
+                    <option>Employee</option>
+                </select>
+                <br>
+                <label for='Avail'>Select Available Timeframes</label>
+                <br>
+                <div name='Avail'>
+                    <input type="checkbox" id="time1" name="time1" value="9am">
+                    <label for="time1">9:00am</label><br>
+                    <input type="checkbox" id="time2" name="time2" value="10am">
+                    <label for="time2">10:00am</label><br>
+                </div>
+                <button type='submit'>Submit Availability</button>
+            </form>
+        </div>
+
+        <!-- Completed Schedule Form (link) -->
+
+        <!-- Create User/Login/Error message when not logged in -->
+        <div>
+            <form>
+                <label for='login-email'>Email:</label>
+                <input name='login-username'/>
+                <br>
+                <label for='login-password'>Password</label>
+                <input name='login-password'/>
+            </form>
+            <span>Your login credentials do not match our records. Try again.</span>
+        </div>
+    </main>
+    
+
+
+</body>
+</html>
